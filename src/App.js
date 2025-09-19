@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import { AnimatePresence } from 'framer-motion';
+import { BrowserRouter, Routes } from 'react-router-dom';
+import WelcomeScreen from './components/ui/Wellcomepage';
+import Animated from './Pages/Animated';
+import Header from './components/Home/Header';
+import {FloatingDockDemo} from "./components/pagestheme/PagesDPage"
+import {FloatingDockDemo2} from "./components/pagestheme/PagesDPage2"
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+        <BrowserRouter>
+        <AnimatePresence mode="wait">
+          {showWelcome && (
+            <WelcomeScreen
+              onLoadingComplete={() => setShowWelcome(false)}
+            />
+          )}
+        </AnimatePresence>
+
+        {!showWelcome && (
+          <>
+          <Animated/>
+          {/* <AnimatedBackground/>  */}
+            <Header />
+
+            <Routes>
+              
+            </Routes>
+              
+           <div className="lg:block hidden" ><FloatingDockDemo/></div> 
+           <div className="lg:hidden block"><FloatingDockDemo2/></div> 
+          </>
+        )}
+      </BrowserRouter>
+  
+  </>
   );
 }
 
