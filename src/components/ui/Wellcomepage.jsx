@@ -60,7 +60,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
       setTimeout(() => {
         onLoadingComplete?.();
       }, 1000);
-    }, 4000);
+    }, 4500);
     
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
@@ -150,7 +150,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                 data-aos-delay="1200"
               >
                 <a
-                  href="https://portfolio-teal-nu-25.vercel.app"
+                  href="https://eren-xites.vercel.app/"
                   className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full relative group hover:scale-105 transition-transform duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -159,7 +159,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   <div className="relative flex items-center  gap-2 text-lg sm:text-xl md:text-2xl">
                     <Globe className="w-4 h-4 mt-[7px] sm:w-5 sm:h-5 text-indigo-600" />
                     <span className="bg-gradient-to-r from-indigo-600 to-customTeal bg-clip-text text-transparent">
-                      <TypewriterEffect text="www.ashish.my.portfolio" />
+                      <TypewriterEffect text="www.eren-xites-store.com" />
                     </span>
                   </div>
                 </a>
