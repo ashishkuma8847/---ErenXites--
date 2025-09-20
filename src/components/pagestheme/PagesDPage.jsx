@@ -4,7 +4,6 @@ import * as TablerIcons from "@tabler/icons-react";
 export function FloatingDockDemo() {
       const links = [
         { title: "Home", icon: <TablerIcons.IconHome className="h-full w-full" />, href:"/" },
-        { title: "Buy Panel", icon: <TablerIcons.IconMessageChatbot className="h-full w-full" />, href: "/buy" },
         { title: "Contect", icon: <TablerIcons.IconMessage className="h-full w-full" />, href: "/contect" },
       ];
     

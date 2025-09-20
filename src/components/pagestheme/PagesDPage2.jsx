@@ -4,7 +4,7 @@ import { FloatingDock2 } from "./PagesTController2";
 export function FloatingDockDemo2() {
   const links = [
     { title: "Home", icon: <TablerIcons.IconHome className="h-full w-full" />, href:"/" },
-    { title: "Buy Panel", icon: <TablerIcons.IconMessageChatbot className="h-full w-full" />, href: "/buy" },
+   
     { title: "Contect", icon: <TablerIcons.IconMessage className="h-full w-full" />, href: "/contect" },
   ];
 
